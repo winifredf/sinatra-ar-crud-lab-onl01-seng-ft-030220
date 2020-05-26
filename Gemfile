@@ -9,7 +9,7 @@ gem 'rake'
 gem 'rspec'
 gem 'rack-test'
 gem 'database_cleaner'
-gem 'require_all'
+# gem 'require_all'
 
 
 group :development do
