@@ -15,7 +15,10 @@ class ArticlesController < Sinatra::Base
     erb :new
   end
   
-  
+  post 'articles' do
+    @articles = Articles.create(params)
+    redirect to "/articles/#{articles.id}"
+  end
   
   get '/articles' do
     @articles=Article.all
