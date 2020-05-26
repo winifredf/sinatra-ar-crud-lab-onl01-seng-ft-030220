@@ -7,8 +7,8 @@ class ArticlesController < ApplicationController
     set :views, 'app/views'
   end
 
-  get '/' do
-    
+  get '/article' do
+    @articles=Article.all
   end
   
   get '/articles/new' do
