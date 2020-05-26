@@ -25,10 +25,6 @@ class ArticlesController < Sinatra::Base
     erb :index
   end
   
-  
-  
-  
-  
   get 'articles' do
     @articles=Article.all
     erb :index
