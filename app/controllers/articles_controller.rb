@@ -7,7 +7,7 @@ class ArticlesController < ApplicationController
     set :views, 'app/views'
   end
 
-  get '/article' do
+  get '/articles' do
     @articles=Article.all
   end
   
