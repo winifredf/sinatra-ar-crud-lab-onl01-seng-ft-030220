@@ -25,13 +25,21 @@ class ArticlesController < Sinatra::Base
     erb :index
   end
   
-  get 'articles' do
-    @articles=Article.all
-    erb :index
+  get 'articles/:id' do
+    @articles = Article.find_(params[:id])
+    erb :show
   end
   
-  get 'articles/:id' do
-    @article = Article.find_(params[:id])
-    erb :show
+  get '/articles/:id/edit' do
+    @articles = Article.find(params[:id])
+    erb :edit
+  
+  patch "/articles/:id" do
+    @articles = Article.find(params[:id])
+    params.delete("_method")
+    if @articles.update(params)
+      redirect to "/articles/#{@articles.id}"
+    else redirect to "/articles/#{articles.id}/edit"
+    end
   end
 end
