@@ -11,7 +11,9 @@ class ArticlesController < ApplicationController
     
   end
   
-  
+  get '/articles/new' do
+    erb :new
+  end
   
   get '/articles' do
     @articles=Article.all
