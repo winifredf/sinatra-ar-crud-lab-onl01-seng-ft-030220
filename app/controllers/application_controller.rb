@@ -42,4 +42,9 @@ class ArticlesController < Sinatra::Base
     else redirect to "/articles/#{articles.id}/edit"
     end
   end
+  
+  delete "/articles/:id" do
+    Article.destroy(params[:id])
+    redirect to "/articles"
+  end
 end
