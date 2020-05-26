@@ -7,7 +7,7 @@ gem 'sinatra'
 gem 'pry-nav'
 gem 'rake'
 gem 'rspec'
-gem 'rack-test'
+gem 'rack-test', 
 gem 'database_cleaner'
 gem 'require_all'
 
