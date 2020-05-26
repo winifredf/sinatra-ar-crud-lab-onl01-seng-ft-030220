@@ -11,14 +11,14 @@ class ArticlesController < ApplicationController
     
   end
   
+  
+  
   get '/articles' do
     @articles=Article.all
     erb :articles/index
   end
   
-  get '/articles/new' do
-    erb :new
-  end
+  
   
   post 'articles' do
     @articles = articles.create(params)
