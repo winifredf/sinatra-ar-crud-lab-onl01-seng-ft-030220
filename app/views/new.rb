@@ -1,4 +1,4 @@
-<form action="/articles" ="POST">
+<form method="/articles" action="POST">
 
 <label for="title">Title:</label><br>
 <input id="title" type="text" name="title">
