@@ -7,6 +7,10 @@ class ArticlesController < ApplicationController
     set :views, 'app/views'
   end
 
+  get '/' do
+    
+  end
+  
   get '/articles' do
     @articles=Article.all
     erb :articles/index
