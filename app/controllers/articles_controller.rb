@@ -1,6 +1,6 @@
 require_relative '../../config/environment'
 
-class ArticlesController < Sinatra::Base
+class ArticlesController < ApplicationController
 
   configure do
     set :public_folder, 'public'
