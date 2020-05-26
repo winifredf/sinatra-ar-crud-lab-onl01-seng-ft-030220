@@ -8,6 +8,7 @@ class ArticlesController < ApplicationController
   end
 
   get '/' do
+    
   end
   
   get '/articles/new' do
